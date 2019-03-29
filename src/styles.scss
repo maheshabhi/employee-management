@@ -1,0 +1,90 @@
+/* You can add global styles to this file, and also import other style files */
+
+@import '../node_modules/primeicons/primeicons.css';
+@import '../node_modules/primeng/resources/themes/nova-light/theme.css';
+@import '../node_modules/primeng/resources/primeng.min.css';
+$fa-font-path: "../node_modules/font-awesome/fonts";
+@import "../node_modules/font-awesome/scss/font-awesome.scss";
+@import "../node_modules/primeflex/primeflex.css";
+
+
+.pr-10 {
+    padding-right: 10px;
+}
+
+.action-buttons {
+    span {
+        i {
+            cursor: pointer;
+        }
+    }
+}
+
+.search {
+    div {
+        padding: 8px 0;
+        input {
+            width: 100%;     
+            border-radius: 0;
+        }
+        p-button {
+            button {
+                height: 33px;
+                padding: 0;
+            }
+        }
+    }
+    
+}
+
+.cust-align-center {
+    align-content: center;
+    justify-content: center;
+    display: flex;
+}
+
+.login-form {
+    input {
+        width: 100%;     
+        border-radius: 0;
+    }
+}
+
+.mt-22 {
+    margin-top: 20%;
+}
+
+.ui-card-title {
+    text-align: center;
+}
+
+.error-message {
+    .ui-message-error {
+        text-align: center;
+        width: 100%;
+        margin-top: 16px;
+    }
+}
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #404C51;
+  }
+  
+  
+  .navbar {
+    padding: 10px 0;
+    background-color: #1e94d2;
+    color: #fff;
+    .title {
+        h3 {
+            margin: 0;
+        }
+    }
+    a {
+        color: #fff;
+        cursor: pointer;
+    }
+  }
+  

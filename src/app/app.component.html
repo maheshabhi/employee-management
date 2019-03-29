@@ -1,0 +1,20 @@
+
+<nav class="navbar">
+    <div class="container">
+        <div class="ui-g">
+            <div class="ui-g-7 ui-g-offset-1 title">
+                <h3>Employee System</h3>
+            </div>
+            <div class="ui-g-2 ui-g-offset-2 p-text-center" *ngIf="userLoggedIn">
+                <a (click)="logout()" class="navbar-toggle"><i class="fa fa-user"></i> Logout</a>
+            </div>
+        </div>
+    </div> 
+</nav>
+
+<p-confirmDialog [style]="{width: '50vw'}"></p-confirmDialog>
+
+      
+<router-outlet></router-outlet>
+
+

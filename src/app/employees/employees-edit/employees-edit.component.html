@@ -1,0 +1,35 @@
+<div class="ui-g-12">
+    <form action="" [formGroup]="employeeEditForm"  (ngSubmit)="onSubmit(employeeEditForm)">
+        <div class="ui-g-4 ui-g-offset-4">
+            <div class="ui-input-group">
+                <span class="ui-float-label">
+                    <input type="text" formControlName="name" pInputText name="name" id="name" />
+                    <!-- <label for="float-input"> Name </label> -->
+                    <div *ngIf="employeeEditForm.controls.name.touched && employeeEditForm.get('name').hasError('required')"> Name is required </div>
+                </span>
+            </div>
+            <br>
+            <div class="ui-input-group">
+                <span class="ui-float-label">
+                    <input type="email" formControlName="email" pInputText name="email" id="email"  />
+                    <!-- <label for="float-input"> Email </label> -->
+                    <div *ngIf="employeeEditForm.controls.email.touched && employeeEditForm.controls.email.hasError('required')"> Email is required </div>
+                    <div *ngIf="employeeEditForm.controls.email.touched && employeeEditForm.controls.email.hasError('email')"> Invalid email address, Please enter a valid email </div>
+                </span>
+            </div>
+            <br>
+            <div class="ui-input-group">
+                <span class="ui-float-label">
+                        <input type="text" formControlName="phone" pInputText name="phone" id="phone" />
+                    <!-- <label for="float-input"> Phone </label> -->
+                    <div *ngIf="employeeEditForm.controls.phone.touched && employeeEditForm.controls.phone.hasError('required')"> phone is required </div>
+                </span>
+            </div>
+            <br>
+            <div class="ui-input-group">
+                <p-button type="submit" label="Cancel" class="ui-button-raised" [disabled]="employeeEditForm.touched" ></p-button>
+                <p-button type="submit" label="Update" class="ui-button-raised" [disabled]="employeeEditForm.invalid || !employeeEditForm.touched" ></p-button>
+            </div>
+        </div>
+    </form>
+</div>

@@ -1,0 +1,40 @@
+<div class="p-grid p-align-center p-col-align-center cust-align-center mt-22">
+    <div>
+        <p-card header="Login" class="p-text-center" [style]="{width: '360px'}" styleClass="ui-card-shadow">
+            <div class="p-col">
+                <div class="">
+                    <form action="" class="login-form" [formGroup]="authForm"  (ngSubmit)="onSubmit(authForm)">
+                        <div class="">
+                            <div class="ui-input-group">
+                                <span class="ui-float-label">
+                                    <input type="email" formControlName="email" pInputText name="email" id="email"  />
+                                    <label for="float-input"> Email </label>
+                                    <div *ngIf="authForm.controls.email.touched && authForm.controls.email.hasError('required')"> Email is required </div>
+                                    <div *ngIf="authForm.controls.email.touched && authForm.controls.email.hasError('email')"> Invalid email address, Please enter a valid email </div>
+                                </span>
+                            </div> 
+                            <br><br>
+                            <div class="ui-input-group">
+                                <span class="ui-float-label">
+                                    <input type="password" formControlName="password" pInputText name="password" id="password" />
+                                    <label for="float-input"> Password </label>
+                                    <div *ngIf="authForm.controls.password.touched && authForm.get('password').hasError('required')"> Password is required </div>
+                                </span>
+                            </div>
+                            <br><br>
+                            <div class="ui-input-group">
+                                <p-button type="submit" label="Submit" class="ui-button-raised cust-align-center" [disabled]="authForm.invalid" ></p-button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </p-card> 
+        <div class="error-message" *ngIf="errorMessage">
+            <!-- <p>{{errorMessage}}</p> -->
+            <p-message severity="error" text="{{errorMessage}}"></p-message>
+            <!-- <p-messages severity="error" [(value)]="errorMessage"></p-messages> -->
+        </div>
+    </div>
+</div>
+
